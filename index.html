@@ -16,9 +16,24 @@
     Made by <a href="https://github.com/boxmein">boxmein</a> <br>
     Last updated 1400782132923
   </div>
-  <script>document.onmousemove = function(evt) {
-    var px = Math.round(evt.pageX / (window.innerWidth / 111));
-    document.getElementById('image').style.backgroundPosition = "0px " + (35392 - 316 * (px+1)) + "px"; 
-  };</script>
+  <script>
+var targetPageX = 0;
+var tweenedPageX = 0;
+
+document.onmousemove = function(evt) {
+  targetPageX = evt.pageX;
+};
+
+function animationFrame() {
+  requestAnimationFrame(animationFrame);
+
+  tweenedPageX += (targetPageX - tweenedPageX) / 5;
+
+  var px = Math.round(tweenedPageX / (window.innerWidth / 110));
+  document.getElementById('image').style.backgroundPosition = "0px " + (35392 - 316 * (px+1)) + "px";
+}
+
+requestAnimationFrame(animationFrame);
+</script>
 </body>
 </html>
