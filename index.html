@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=400" />
+  <title>Pie to the face!</title>
+  <link rel="stylesheet" href="pieslap.css" />
+
+</head>
+<body>
+  <!-- complete idea theft from eelslap.com -->
+  <div id="image" class="center"></div>
+  <div id="foot" class="center">
+    <h1>Pie slap!</h1>
+    Inspired by <a href="http://eelslap.com">http://eelslap.com</a> <br>
+    Made by <a href="https://github.com/boxmein">boxmein</a> <br>
+    Last updated 1400782132923
+  </div>
+  <script>document.onmousemove = function(evt) {
+    var px = Math.round(evt.pageX / (window.innerWidth / 111));
+    document.getElementById('image').style.backgroundPosition = "0px " + (35392 - 316 * (px+1)) + "px"; 
+  };</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.center {
+  width: 400px;
+  height: 316px;
+  margin: 0 auto;
+}
+
+#image {
+  height: 316px;
+  margin-top: 10%;
+  margin-bottom: 20px;
+  background-image: url(pieslap.jpg);
+  background-position: 0 0;
+}
+
+#foot {
+  margin-bottom: 5px;
+  color: darken(white, 40%);
+  h1 {
+    font-family: serif;
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
